@@ -9,6 +9,9 @@ const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+// const MongoStore = require('connect-mongo')(session);
+const MongoDBStore = require('connect-mongodb-session')(session);
+
 
 //to access Post Request
 app.use(express.urlencoded({ extended:true}));
@@ -30,15 +33,46 @@ app.set('layout extractScripts', true);
 //set up the view engine ejs
 app.set('view engine', 'ejs');
 app.set('views', './views');
+// // mongo store is used to store the session cookie in the db
+// app.use(session({
+//     name: 'codeial',
+//     // TODO change the secret before deployment in production mode
+//     secret: 'blahsomething',
+//     saveUninitialized: false,
+//     resave: false,
+//     cookie: {
+//         maxAge: 1000 * 60 * 100,
+//     },
+//     store: new MongoStore(
+//         {
+//             mongooseConnection: mongoose.connection,
+//             autoRemove: 'disabled'
+        
+//         },
+//         function(err){
+//             console.log(err ||  'connect-mongodb setup ok');
+//         }
+//     )
+// }));
 
+// Session store setup with connect-mongodb-session
+const store = new MongoDBStore({
+    uri: 'mongodb://localhost/PipeMaster_development',
+    collection: 'sessions'
+});
+
+store.on('error', function(error) {
+    console.log('Session Store Error:', error);
+});
+
+// Express-session setup
 app.use(session({
-    name: 'PipeMaster',
-    //TODO change the secret before deployment in production mode
     secret: 'blahsomething',
-    saveUninitialized: false,
     resave: false,
+    saveUninitialized: false,
+    store: store,
     cookie: {
-        maxAge: (1000 * 60 * 100)
+        maxAge: 1000 * 60 * 100 // Adjusted for session expiration
     }
 }));
 
