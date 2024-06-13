@@ -1,0 +1,87 @@
+.home-content {
+    padding: 20px;
+}
+
+.hero {
+    position: relative; /* Ensure the hero is positioned relative for absolute children */
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide overflow for absolutely positioned background */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/path/to/your/background-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Adjust opacity as desired for the background effect */
+    z-index: -1; /* Move the background behind other content */
+    pointer-events: none; /* Ensure the background does not intercept clicks */
+}
+
+.hero-content {
+    position: relative; /* Ensure content is on top of the background */
+    z-index: 1; /* Ensure content is on top of the background */
+}
+
+.hero h3 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #000; /* Black text color */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+    color: #333; /* Dark gray for paragraph text */
+}
+
+.hero .cta-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero .cta-button:hover {
+    background-color: #0056b3;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.feature {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 45%;
+}
+
+.feature i {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #555;
+}

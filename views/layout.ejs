@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-  
+
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/user_sign_up.css">
+    <link rel="stylesheet" href="/css/user_sign_in.css">
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <%- style %>
 </head>
 <body>
-    <%-include ('_header'); -%>
-
-    <%-  body -%>
-
-    <%-include ('_footer'); -%>
+    <%- include ('_header'); -%>
+    <main id="layout-main">
+        <%- body -%>
+    </main>
+    <%- include ('_footer'); -%>
     <%- script %>
-
-    
 </body>
 </html>

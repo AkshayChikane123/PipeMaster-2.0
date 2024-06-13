@@ -1,6 +1,21 @@
-
+<!-- 
 <link rel="stylesheet" href="/css/user_profile.css">
     <h1>PipeMaster /Profile page </h1>
 
   <p><%= user.name %></p>
-  <p><%= user.email %></p>
+  <p><%= user.email %></p> -->
+
+  
+  <link rel="stylesheet" href="/css/user_profile.css">
+  <h1>Welcome to PipeMaster, <%= user.name %>!</h1>
+  
+  <div class="profile-container">
+      <div class="profile-info">
+          <h2>Your Profile Information</h2>
+          <p><strong>Name:</strong> <%= user.name %></p>
+          <p><strong>Email:</strong> <%= user.email %></p>
+          <p><strong>Phone:</strong> <%= user.phone || 'Not provided' %></p>
+          <p><strong>Address:</strong> <%= user.address || 'Not provided' %></p>
+      </div>
+  </div>
+  

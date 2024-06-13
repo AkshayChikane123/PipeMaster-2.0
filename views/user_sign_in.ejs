@@ -1,4 +1,4 @@
-
+<!-- 
 <h1>Sign In</h1>
 
 
@@ -8,15 +8,19 @@
     <input type="password" name="password" placeholder="Password" required>
     <input type="submit" value="Sign In">
 
-</form>
+</form> -->
 
-<!-- <form action="/users/create" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="password" name=" confirm_password" placeholder="Confirm password" required>
-    <input type="submit" value="Sign Up">
-    
-    </form>
-    
-     -->
+
+
+<form action="/users/create-session" method="POST" class="signin-form">
+    <h1>Sign In</h1>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+    </div>
+    <input type="submit" value="Sign In" class="btn-primary">
+</form>

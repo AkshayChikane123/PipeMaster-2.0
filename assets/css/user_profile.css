@@ -1,3 +1,33 @@
-body{
-    background-color:darkgray;
-}
+.profile-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px; }
+
+.profile-info {
+  text-align: left; }
+
+.profile-info h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px; }
+
+.profile-info p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 8px; }
+
+.profile-info p strong {
+  font-weight: bold;
+  color: #333; }
+
+.profile-info p:last-child {
+  margin-bottom: 0; }
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333; }

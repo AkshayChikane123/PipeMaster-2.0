@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
     Page Header 
 
     <ul><% if (locals.user){%>
@@ -14,4 +14,25 @@
 
     </ul>
 
+</header> -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <h1><a href="/">PipeMaster</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <% if (locals.user) { %>
+                    <li>
+                        <i class="fas fa-user" style="color: skyblue; margin-right: 5px;"></i>
+                        <a href="/users/profile"><%= user.name %></a>
+                    </li>
+                    <li><a href="/users/sign-out">Sign Out</a></li>
+                <% } else { %>
+                    <li><a href="/users/sign-in">Sign In</a></li>
+                    <li><a href="/users/sign-up">Sign Up</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </div>
 </header>
