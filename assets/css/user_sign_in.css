@@ -1,7 +1,7 @@
 .signin-form {
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -14,7 +14,7 @@
     margin-bottom: 15px; }
     .signin-form .form-group label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       font-weight: bold; }
     .signin-form .form-group input[type="email"],
     .signin-form .form-group input[type="password"] {

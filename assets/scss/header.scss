@@ -2,62 +2,62 @@ header {
     background-color: #f8f8f8;
     padding: 20px 0;
     border-bottom: 4px solid #0093DD;
+    width: 100%; /* Ensure the header takes full width of the viewport */
 
     .header-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1700px;
-        margin: 0 auto;
-        padding: 0 20px;
+        max-width: 1700px; /* Maximum width of the content */
+        margin: 0 auto; /* Center the content */
+        padding: 0 20px; /* Add some padding to the sides */
+    }
 
-        .logo {
-            h1 {
+    .logo {
+        h1 {
+            a {
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                position: relative;
+
+                &:hover {
+                    color: #0093DD;
+                }
+
+                i {
+                    color: #0093DD;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-left: 20px;
+                position: relative;
+
                 a {
                     text-decoration: none;
                     color: #333;
                     font-weight: 500;
                     position: relative;
-                   
+
+                    i {
+                        color: skyblue;
+                        margin-right: 5px;
+                    }
 
                     &:hover {
                         color: #007bff;
-                    }
-
-                    i {
-                        color: rgb(75, 188, 233);
-                        margin-right: 5px;
-                    }
-                }
-            }
-        }
-
-        nav {
-            ul {
-                list-style: none;
-                display: flex;
-                justify-content: flex-end;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    margin-left: 20px;
-                    position: relative;
-
-                    a {
-                        text-decoration: none;
-                        color: #333;
-                        font-weight: 500;
-                        position: relative;
-
-                        i {
-                            color: skyblue;
-                            margin-right: 5px;
-                        }
-
-                        &:hover {
-                            color: #007bff;
-                        }
                     }
                 }
             }

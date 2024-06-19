@@ -37,7 +37,9 @@ module.exports.create = async function(req, res) {
         console.log("Request body:", req.body);  // Log request body
 
         if (req.body.password !== req.body.confirm_password) {
-            console.log("Passwords do not match");
+            req.flash('error','Confirm Password is not the same with password entered')
+
+            // console.log("Passwords do not match");
             return res.redirect('back');
         }
 
@@ -45,14 +47,18 @@ module.exports.create = async function(req, res) {
 
         if (!user) {
             user = await User.create(req.body);
-            console.log('User created successfully:', user);  // Log success
+            req.flash('success','User Created Successfully')
+
+            // console.log('User created successfully:', user);  // Log success
             return res.redirect('/users/sign-in');
         } else {
-            console.log('User already exists');
+            req.flash('error','User Already Existed')
+            // console.log('User already exists');
             return res.redirect('back');
         }
     } catch (err) {
-        console.log('Error:', err);
+        req.flash('error', err);
+        // console.log('Error:', err);
         return res.redirect('back');
     }
 };
@@ -60,14 +66,35 @@ module.exports.create = async function(req, res) {
 
 //sign in and create session for the user
 module.exports.createSession = function (req, res) {
-
+    req.flash('success','Logged in Successfuly')
     return res.redirect('/')
 }
 
 
 module.exports.destroySession = function (req, res, next) {
+    
     req.logout(function(err) {
         if (err) { return next(err); }
+        req.flash('success', 'You have logged out');
         return res.redirect('/');
     });
+   
+
 };
+
+
+module.exports.createEstimation = function (req, res) {
+    
+    if (!req.isAuthenticated()) {
+        // req.flash('success', 'You started Estimation Process');
+        return res.redirect('/users/estimation');
+       
+    }
+
+
+    return res.render('index', {
+        
+        title: "PipeMaster | estimation"
+    });
+   
+}

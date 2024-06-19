@@ -1,40 +1,45 @@
 header {
   background-color: #f8f8f8;
   padding: 20px 0;
-  border-bottom: 4px solid #0093DD; }
+  border-bottom: 4px solid #0093DD;
+  width: 100%;
+  /* Ensure the header takes full width of the viewport */ }
   header .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1700px;
+    /* Maximum width of the content */
     margin: 0 auto;
-    padding: 0 20px; }
-    header .header-container .logo h1 a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
+    /* Center the content */
+    padding: 0 20px;
+    /* Add some padding to the sides */ }
+  header .logo h1 a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative; }
+    header .logo h1 a:hover {
+      color: #0093DD; }
+    header .logo h1 a i {
+      color: #0093DD;
+      margin-right: 5px; }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0; }
+    header nav ul li {
+      margin-left: 20px;
       position: relative; }
-      header .header-container .logo h1 a:hover {
-        color: #007bff; }
-      header .header-container .logo h1 a i {
-        color: #4bbce9;
-        margin-right: 5px; }
-    header .header-container nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: flex-end;
-      margin: 0;
-      padding: 0; }
-      header .header-container nav ul li {
-        margin-left: 20px;
+      header nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
         position: relative; }
-        header .header-container nav ul li a {
-          text-decoration: none;
-          color: #333;
-          font-weight: 500;
-          position: relative; }
-          header .header-container nav ul li a i {
-            color: skyblue;
-            margin-right: 5px; }
-          header .header-container nav ul li a:hover {
-            color: #007bff; }
+        header nav ul li a i {
+          color: skyblue;
+          margin-right: 5px; }
+        header nav ul li a:hover {
+          color: #007bff; }

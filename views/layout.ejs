@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
 
-    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <link rel="stylesheet" href="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/user_sign_up.css">
     <link rel="stylesheet" href="/css/user_sign_in.css">
+    <link rel="stylesheet" href="/css/user_profile.css">
 
-
-
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="/css/quote.css"> -->
+    <link rel="stylesheet" href="/css/demoquote.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -21,10 +24,39 @@
 </head>
 <body>
     <%- include ('_header'); -%>
+  
+
     <main id="layout-main">
         <%- body -%>
     </main>
+
     <%- include ('_footer'); -%>
+
     <%- script %>
+    <script src="/js/script.js"></script>
+    <script>
+        <% if (flash.success && flash.success.length > 0) {%>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.success %>",
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500
+                
+            }).show();    
+        <%} %>
+
+        <% if (flash.error && flash.error.length > 0) {%>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.error %>",
+                type: 'error',
+                layout: 'topRight',
+                timeout: 1500
+                
+            }).show();    
+        <%} %>
+    </script>
+
 </body>
 </html>

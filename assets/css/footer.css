@@ -2,9 +2,9 @@ footer {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  /* Remove absolute positioning to allow natural placement */ }
   footer .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -22,4 +22,4 @@ footer {
     color: #fff;
     transition: color 0.3s; }
     footer a:hover {
-      color: #007bff; }
+      color: #0093DD; }

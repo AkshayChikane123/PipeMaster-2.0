@@ -1,0 +1,437 @@
+#layout-main {
+    background: linear-gradient(to bottom, #003366, #66ccff); // Example: Navy to Sky Blue
+    
+}
+.container,
+.container-middle,
+.container-lower {
+    background: linear-gradient(to bottom, #f8f9fa, #e0e0e0); // Example: Light Grey to Slightly Darker Grey
+    margin: auto;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Optional box shadow for better visual separation
+}
+
+
+
+
+
+.container {
+    display: flex; /* Change to inline-flex to fit content */
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Example box shadow
+
+    #pipingForm {
+        #headingTable {
+            width: auto;
+            column-width: auto;
+            
+            // box-sizing: border-box;
+
+            // thead {
+            //     tr {
+            //         th:first-child {
+            //             border-top-left-radius: 20px; /* Adjust as needed */
+            //         }
+            //         th:last-child {
+            //             border-top-right-radius: 20px; /* Adjust as needed */
+            //         }
+            //     }
+            // }
+
+            // tfoot {
+            //     tr {
+            //         td:first-child {
+            //             border-bottom-left-radius: 20px; /* Adjust as needed */
+            //         }
+            //         td:last-child {
+            //             border-bottom-right-radius: 20px; /* Adjust as needed */
+            //         }
+            //     }
+            // }
+
+            thead tr th {
+                background-color: rgb(228, 202, 99);
+                font-weight: 500;
+                font-size: 1rem; /* Adjust font size as needed */
+                padding: 10px;
+                text-align: center;
+                text-transform: capitalize;
+                text-wrap:stable;
+        
+
+            }
+            
+            tbody tr td {
+                padding: 10px;
+                border: 1px solid #a09797;
+                text-align: center;
+                font-size: 1rem; /* Adjust font size as needed */
+                color: #333;
+                white-space: nowrap; /* Prevents text from wrapping */
+
+                input[type="text"] {
+                    width: 100%;
+                    padding: 5px;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    font-size: 0.8rem; /* Adjust font size as needed */
+                    font-weight: 600;
+                }
+
+                input[type="number"] {
+                    width: 70%;
+                    height:30px;
+                    padding: 5px;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    font-size: 1rem; /* Adjust font size as needed */
+                    
+                }
+
+                input[type="text"]::placeholder,
+                input[type="number"]::placeholder {
+                    text-align: center;
+                }
+            }
+
+            tbody tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            tfoot tr td {
+                padding: 10px;
+                border: 1px solid #a09797;
+                text-align: center;
+                font-size: 0.9rem;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+        }
+
+        .dropdown-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            justify-content: center;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+
+            label {
+                align-items: center;
+                padding: 20px;
+                display: flex;
+                text-wrap: nowrap;
+                font-weight: 400;
+            }
+
+            select {
+                height: 10%;
+                padding: 5px;
+                margin-top: 15px;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+            }
+
+            &:hover {
+                background-color: #e0e0e0; /* Change this to desired hover background color */
+            }
+        }
+
+        .button-container {
+            align-items: center;
+            position: relative;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px;
+
+            .btn-primary,
+            .btn-save {
+                background-color: #4CAF50;
+            }
+
+            .btn-default-time {
+                background-color: #f0ad4e;
+            }
+
+            &:hover {
+                background-color: #e0e0e0; /* Change this to desired hover background color */
+            }
+        }
+    }
+}
+
+
+.container-middle {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Example box shadow
+
+    .table-container {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: fit-content;
+        
+        .styled-table {
+            margin: auto;
+            table-layout: auto;
+     
+            th, td {
+                padding: 10px;
+                border: 1px solid #a09797;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            // Ensure input takes the width of its parent td
+            td {
+                padding: 10px;
+                border: 1px solid #a09797;
+                text-align: center;
+                font-size: 1rem;
+                position: relative; // Ensure td positioning context
+
+                input[type="text"],
+                input[type="number"] {
+                    width: 100%; // Take full width of td
+                    box-sizing: border-box; // Include padding/border in width
+                    padding: 5px;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    font-size: 1rem; /* Adjust font size as needed */
+                }
+
+                input[type="text"]::placeholder,
+                input[type="number"]::placeholder {
+                    text-align: center;
+                }
+            }
+
+            
+        
+            th {
+                background-color: rgb(228, 202, 99);
+                font-weight: bold;
+            }
+        
+            tr:hover {
+                background-color: #f1f1f1; // Apply hover effect here
+            }
+        
+            tfoot {
+                font-weight: bold;
+                border: 1px solid #a09797;
+            }
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding-bottom: 30px;
+
+            .btn-select { 
+                background-color: #d1db40;
+                color: white;
+            }
+
+            .btn-calculate {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .btn-estimate {
+                background-color: #f0ad4e;
+            }
+
+            &:hover {
+                background-color: #e0e0e0; /* Change this to desired hover background color */
+            }
+        }
+    }
+}
+
+
+.container-lower {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    width: fit-content;
+    border-radius: 10px; // Example border radius
+    // padding: 20px; // Example padding
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Example box shadow
+
+    table {
+        width: 100%; // Ensure the table takes full width of the container
+        border-collapse: collapse; // Collapse table borders
+        background-color: #fff; // White background for the table
+        border-radius: 10px; // Example border radius for the table
+        overflow: hidden; // Hide overflowing content
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Example box shadow
+
+        caption {
+            font-size: 1.2rem; // Example font size for caption
+            font-weight: bold; // Example font weight for caption
+            padding: 10px; // Example padding for caption
+            // Example background color for caption
+            border-bottom: 1px solid #ccc; // Example border bottom for caption
+            border-radius: 8px 8px 0 0; // Example border radius for caption
+        }
+
+        thead {
+           // Example background color for table header
+           border: 1px solid #a09797;
+           // Example bottom border for cells
+        }
+
+        th, td {
+            padding: 12px; // Example padding for table cells
+            text-align: center; // Center align text in cells
+            border: 1px solid #a09797;
+            // min-width: fit-content;
+            // Example bottom border for cells
+        }
+
+        tfoot {
+           
+            font-weight: bold; // Example font weight for footer cells
+        }
+
+        tfoot td {
+            padding: 12px; // Example padding for footer cells
+            text-align: center; // Center align text in footer cells
+            border: 1px solid #a09797;
+            // Example top border for footer
+        }
+    }
+}
+
+
+.btn {
+    margin: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    color: initial; /* Reset color to initial */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+
+    &:hover {
+        color: darkviolet; /* Change text color on hover */
+    }
+}
+
+.btn-danger {
+    background-color: #f37d74;
+}
+
+table {
+    background-color:#fff;
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);}
+   
+
+    
+caption {
+            caption-side: top;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.2rem; // Example font size for caption
+            font-weight: bold; // Example font weight for caption
+            padding: 10px; // Example padding for caption
+            border-bottom: 1px solid #ccc; // Example border bottom for caption
+            border-radius: 8px 8px 0 0; // Example border radius for caption
+}
+
+ 
+
+
+thead tr th {
+    background-color: rgb(228, 202, 99); /* Original header background color */
+    font-weight: 500;
+    font-size: 1rem; /* Original font size */
+    padding: 10px;
+    // text-transform: uppercase;
+    border: 1px solid #a09797; /* Original border color */
+    width: auto; /* Adjust width based on content */
+}
+
+  
+
+tbody tr td {
+    padding: 10px;
+    border: 1px solid #a09797; /* Original border color */
+    text-align: center;
+    font-size: 1rem; /* Original font size */
+    color: #333;
+    width: auto; /* Adjust width based on content */
+}
+
+
+
+tfoot tr td {
+    padding: 10px;
+    border: 1px solid #a09797; /* Original border color */
+    text-align: center;
+    font-size: 1rem; /* Original font size */
+    font-weight: bold;
+    width: auto; /* Adjust width based on content */
+}
+
+/* Additional Styling for Hover Effects */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+thead tr:hover {
+    background-color: #f1f1f1;
+}
+tfoot tr:hover {
+    background-color: #f1f1f1;
+}
+  
+/* Class to highlight invalid input fields */
+.invalid-input {
+    border: 2px solid red;
+}
+
+/* Class to center text in input fields */
+.centered-input {
+    text-align: center;
+    padding: 5px;
+    /* Add padding for better visual spacing */
+}
+
+.checkbox-input {
+    transform: scale(1.5);
+    /* Increase the size of the checkbox */
+}
+
+
+
+#hourlyRate {
+    width: 80%;
+    padding: 8px; /* Adjust padding as needed */
+    text-align: left; 
+    
+    ::placeholder {
+    text-align: start; /* Align placeholder text to the left */
+    }
+}

@@ -1,0 +1,311 @@
+#layout-main {
+  background: linear-gradient(to bottom, #003366, #66ccff); }
+
+.container,
+.container-middle,
+.container-lower {
+  background: linear-gradient(to bottom, #f8f9fa, #e0e0e0);
+  margin: auto;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+
+.container {
+  display: flex;
+  /* Change to inline-flex to fit content */
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .container #pipingForm #headingTable {
+    width: auto;
+    column-width: auto; }
+    .container #pipingForm #headingTable thead tr th {
+      background-color: #e4ca63;
+      font-weight: 500;
+      font-size: 1rem;
+      /* Adjust font size as needed */
+      padding: 10px;
+      text-align: center;
+      text-transform: capitalize;
+      text-wrap: stable; }
+    .container #pipingForm #headingTable tbody tr td {
+      padding: 10px;
+      border: 1px solid #a09797;
+      text-align: center;
+      font-size: 1rem;
+      /* Adjust font size as needed */
+      color: #333;
+      white-space: nowrap;
+      /* Prevents text from wrapping */ }
+      .container #pipingForm #headingTable tbody tr td input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-size: 0.8rem;
+        /* Adjust font size as needed */
+        font-weight: 600; }
+      .container #pipingForm #headingTable tbody tr td input[type="number"] {
+        width: 70%;
+        height: 30px;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-size: 1rem;
+        /* Adjust font size as needed */ }
+      .container #pipingForm #headingTable tbody tr td input[type="text"]::placeholder,
+      .container #pipingForm #headingTable tbody tr td input[type="number"]::placeholder {
+        text-align: center; }
+    .container #pipingForm #headingTable tbody tr:hover {
+      background-color: #f1f1f1; }
+    .container #pipingForm #headingTable tfoot tr td {
+      padding: 10px;
+      border: 1px solid #a09797;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      white-space: nowrap; }
+  .container #pipingForm .dropdown-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray; }
+    .container #pipingForm .dropdown-container label {
+      align-items: center;
+      padding: 20px;
+      display: flex;
+      text-wrap: nowrap;
+      font-weight: 400; }
+    .container #pipingForm .dropdown-container select {
+      height: 10%;
+      padding: 5px;
+      margin-top: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc; }
+    .container #pipingForm .dropdown-container:hover {
+      background-color: #e0e0e0;
+      /* Change this to desired hover background color */ }
+  .container #pipingForm .button-container {
+    align-items: center;
+    position: relative;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px; }
+    .container #pipingForm .button-container .btn-primary,
+    .container #pipingForm .button-container .btn-save {
+      background-color: #4CAF50; }
+    .container #pipingForm .button-container .btn-default-time {
+      background-color: #f0ad4e; }
+    .container #pipingForm .button-container:hover {
+      background-color: #e0e0e0;
+      /* Change this to desired hover background color */ }
+
+.container-middle {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .container-middle .table-container {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: fit-content; }
+    .container-middle .table-container .styled-table {
+      margin: auto;
+      table-layout: auto; }
+      .container-middle .table-container .styled-table th, .container-middle .table-container .styled-table td {
+        padding: 10px;
+        border: 1px solid #a09797;
+        text-align: center;
+        font-size: 1rem; }
+      .container-middle .table-container .styled-table td {
+        padding: 10px;
+        border: 1px solid #a09797;
+        text-align: center;
+        font-size: 1rem;
+        position: relative; }
+        .container-middle .table-container .styled-table td input[type="text"],
+        .container-middle .table-container .styled-table td input[type="number"] {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 5px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          text-align: center;
+          font-size: 1rem;
+          /* Adjust font size as needed */ }
+        .container-middle .table-container .styled-table td input[type="text"]::placeholder,
+        .container-middle .table-container .styled-table td input[type="number"]::placeholder {
+          text-align: center; }
+      .container-middle .table-container .styled-table th {
+        background-color: #e4ca63;
+        font-weight: bold; }
+      .container-middle .table-container .styled-table tr:hover {
+        background-color: #f1f1f1; }
+      .container-middle .table-container .styled-table tfoot {
+        font-weight: bold;
+        border: 1px solid #a09797; }
+    .container-middle .table-container .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding-bottom: 30px; }
+      .container-middle .table-container .button-container .btn-select {
+        background-color: #d1db40;
+        color: white; }
+      .container-middle .table-container .button-container .btn-calculate {
+        background-color: #4CAF50;
+        color: white; }
+      .container-middle .table-container .button-container .btn-estimate {
+        background-color: #f0ad4e; }
+      .container-middle .table-container .button-container:hover {
+        background-color: #e0e0e0;
+        /* Change this to desired hover background color */ }
+
+.container-lower {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .container-lower table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .container-lower table caption {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      border-radius: 8px 8px 0 0; }
+    .container-lower table thead {
+      border: 1px solid #a09797; }
+    .container-lower table th, .container-lower table td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #a09797; }
+    .container-lower table tfoot {
+      font-weight: bold; }
+    .container-lower table tfoot td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #a09797; }
+
+.btn {
+  margin: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  color: initial;
+  /* Reset color to initial */
+  transition: color 0.3s ease;
+  /* Smooth transition for color change */ }
+  .btn:hover {
+    color: darkviolet;
+    /* Change text color on hover */ }
+
+.btn-danger {
+  background-color: #f37d74; }
+
+table {
+  background-color: #fff;
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); }
+
+caption {
+  caption-side: top;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0; }
+
+thead tr th {
+  background-color: #e4ca63;
+  /* Original header background color */
+  font-weight: 500;
+  font-size: 1rem;
+  /* Original font size */
+  padding: 10px;
+  border: 1px solid #a09797;
+  /* Original border color */
+  width: auto;
+  /* Adjust width based on content */ }
+
+tbody tr td {
+  padding: 10px;
+  border: 1px solid #a09797;
+  /* Original border color */
+  text-align: center;
+  font-size: 1rem;
+  /* Original font size */
+  color: #333;
+  width: auto;
+  /* Adjust width based on content */ }
+
+tfoot tr td {
+  padding: 10px;
+  border: 1px solid #a09797;
+  /* Original border color */
+  text-align: center;
+  font-size: 1rem;
+  /* Original font size */
+  font-weight: bold;
+  width: auto;
+  /* Adjust width based on content */ }
+
+/* Additional Styling for Hover Effects */
+tbody tr:hover {
+  background-color: #f1f1f1; }
+
+thead tr:hover {
+  background-color: #f1f1f1; }
+
+tfoot tr:hover {
+  background-color: #f1f1f1; }
+
+/* Class to highlight invalid input fields */
+.invalid-input {
+  border: 2px solid red; }
+
+/* Class to center text in input fields */
+.centered-input {
+  text-align: center;
+  padding: 5px;
+  /* Add padding for better visual spacing */ }
+
+.checkbox-input {
+  transform: scale(1.5);
+  /* Increase the size of the checkbox */ }
+
+#hourlyRate {
+  width: 80%;
+  padding: 8px;
+  /* Adjust padding as needed */
+  text-align: left; }
+  #hourlyRate ::placeholder {
+    text-align: start;
+    /* Align placeholder text to the left */ }

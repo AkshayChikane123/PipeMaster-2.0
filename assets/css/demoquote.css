@@ -1,0 +1,127 @@
+/* Variables */
+/* Mixins */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0; }
+
+.a4-container {
+  border: 1px solid #ced4da;
+  padding: 20px;
+  margin: 20px auto;
+  /* Center the container */
+  max-width: 100%;
+  /* Adjust to A4 width */
+  width: 210mm;
+  /* A4 width */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Apply page border mixin */ }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ced4da; }
+  .header .first {
+    flex: 1; }
+    .header .first ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+  .header .second {
+    flex: 1; }
+    .header .second ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: right; }
+      .header .second ul li {
+        margin-bottom: 5px;
+        font-size: 14px; }
+        .header .second ul li:last-child {
+          font-weight: bold; }
+      .header .second ul h2 {
+        font-size: 24px;
+        margin: 5px 0; }
+
+.mainbody {
+  padding: 20px 0; }
+
+.salesquoteHead {
+  text-align: center;
+  margin-bottom: 20px; }
+  .salesquoteHead h1 {
+    font-size: 36px;
+    color: #007bff; }
+
+.salesquoteid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+  .salesquoteid ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .salesquoteid ul h4 {
+      font-size: 16px;
+      margin: 5px 0;
+      font-weight: normal; }
+
+.quoteTable table {
+  width: 100%;
+  border-collapse: collapse; }
+  .quoteTable table th, .quoteTable table td {
+    border: 1px solid #ced4da;
+    padding: 8px;
+    text-align: center; }
+  .quoteTable table th {
+    background-color: #6c757d;
+    color: #fff; }
+  .quoteTable table td:nth-child(odd, even) {
+    background-color: #f8f9fa; }
+  .quoteTable table tfoot td {
+    background-color: #6c757d;
+    color: #fff;
+    font-weight: bold; }
+
+.quoteTable h2 {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #007bff; }
+
+.footer {
+  margin-top: 20px; }
+  .footer .terms-condition h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px; }
+  .footer .terms-condition ol {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    font-size: 14px; }
+    .footer .terms-condition ol li {
+      margin-bottom: 10px; }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; }
+    .header .second {
+      text-align: center;
+      margin-top: 10px; } }
+
+@media print {
+  body {
+    background-color: #fff; }
+  .a4-container {
+    max-width: 100%;
+    box-shadow: none;
+    border: none; }
+  .footer {
+    display: none; } }
