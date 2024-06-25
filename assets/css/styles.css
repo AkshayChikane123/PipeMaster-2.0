@@ -127,16 +127,15 @@
         padding: 10px;
         border: 1px solid #a09797;
         text-align: center;
-        font-size: 1rem; }
+        font-size: 0.9rem; }
       .container-middle .table-container .styled-table td {
         padding: 10px;
         border: 1px solid #a09797;
         text-align: center;
         font-size: 1rem;
         position: relative; }
-        .container-middle .table-container .styled-table td input[type="text"],
         .container-middle .table-container .styled-table td input[type="number"] {
-          width: 100%;
+          width: 70%;
           box-sizing: border-box;
           padding: 5px;
           border-radius: 4px;
@@ -199,13 +198,17 @@
     .container-lower table th, .container-lower table td {
       padding: 12px;
       text-align: center;
-      border: 1px solid #a09797; }
+      border: 1px solid #a09797;
+      font-weight: bold; }
+    .container-lower table td {
+      font-weight: bold; }
     .container-lower table tfoot {
       font-weight: bold; }
     .container-lower table tfoot td {
       padding: 12px;
       text-align: center;
-      border: 1px solid #a09797; }
+      border: 1px solid #a09797;
+      font-weight: bold; }
 
 .btn {
   margin: 10px;

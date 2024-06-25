@@ -258,6 +258,7 @@ function saveRow() {
         return;
     }
 
+     
     const siteNames = Object.keys(projectData);
     alert(
         "Project data for the following sites has been saved:\n" +
@@ -265,7 +266,37 @@ function saveRow() {
     );
 
     // Log the detailed data to the console
-    console.log("Saved Primary Data:", projectData);
+    console.log("Saved Primary Data:", JSON.stringify(projectData));
+
+//////////////       // Submit the project data to the server
+    const option = 
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+        },
+
+        body: projectData
+        }
+        console.log("Saved Primary Data:", option);
+
+    
+       fetch('/users/saveEstimation', option ).then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Failed to save data.');
+        }
+    }).then(data => {
+        alert('Project data saved successfully!');
+        console.log('Saved Data:', data);
+    }).catch(error => {
+        alert('Error saving project data.');
+        console.error('Error:', error);
+    });
+
+
+//////////////////
 
     // Trigger the function to calculate additional data
     selectionFactors(); // Assuming this function will populate another table
@@ -1190,16 +1221,65 @@ function saveFormDataAndNavigate() {
         );
 
         // Navigate to demoquote.html
-        window.location.href = "./html/demoquote.html";
+                window.location.href = '/users/demoquote';
     } else {
         form.reportValidity();
     }
 }
+// function saveFormDataAndNavigate() {
+//     // Get the form element
+//     const form = document.getElementById("estimateForm");
+
+//     // Validate form and highlight required fields
+//     const requiredFields = document.querySelectorAll(".required-field");
+//     let isValid = true;
+
+//     requiredFields.forEach((field) => {
+//         if (!field.value.trim()) {
+//             field.classList.add("is-invalid");
+//             isValid = false;
+//         } else {
+//             field.classList.remove("is-invalid");
+//         }
+//     });
+
+//     // Validate hourlyRate field separately
+//     const hourlyRateInput = document.getElementById("hourlyRate");
+//     const hourlyRate = hourlyRateInput.value.trim();
+//     if (!hourlyRate) {
+//         hourlyRateInput.classList.add("is-invalid");
+//         isValid = false;
+//     } else {
+//         hourlyRateInput.classList.remove("is-invalid");
+//     }
+
+//     if (isValid && form.checkValidity()) {
+//         // Gather all form data
+//         const formData = new FormData(form);
+//         const jsonData = {};
+//         formData.forEach((value, key) => jsonData[key] = value);
+
+//         // Send the data to the server
+//         fetch('/users/saveEstimation', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(jsonData)
+//         }).then(response => {
+//             if (response.ok) {
+//                 window.location.href = '/users/demoquote';
+//             } else {
+//                 throw new Error('Failed to save data.');
+//             }
+//         }).catch(error => {
+//             console.error('Error:', error);
+//         });
+//     } else {
+//         form.reportValidity();
+//     }
+// }
 
 
 
-
-function salesQuote() {
-	console.log("Sales quote function executed.");
-	// Additional processing logic can go here
-}
+ 

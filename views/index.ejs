@@ -16,7 +16,7 @@
     <!-- <body style="background-image: url('/images/pipe1.jpg');"></body> -->
 
     <div class="container">
-        <form id="pipingForm">
+        <form id="pipingForm" action="/users/saveEstimation" method="POST">
            
              <table id="headingTable">
                 <caption>Project Hours Estimation Tool</caption> 
@@ -69,7 +69,7 @@
                     <option>Yes</option>
                 </select>
             </div>
-            <div id="inputContainer"></div>
+            
 
             <div class="button-container">
                 <button type="button" class="btn btn-primary" onclick="addRow()">Add Project</button>

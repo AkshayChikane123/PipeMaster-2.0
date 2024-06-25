@@ -1,15 +1,14 @@
 <!-- <h1>Sign Up</h1>
-
-
 <form action="/users/create" method="POST" >
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
 <input type="password" name="password" placeholder="Password" required>
 <input type="password" name="confirm_password" placeholder="Confirm password" required>
 <input type="submit" value="Sign Up">
-
 </form>
- --><section class="signup-container">
+-->
+
+<section class="signup-container">
     <div class="signup-content">
         <h1>Sign Up</h1>
         <form action="/users/create" method="POST" class="signup-form">
@@ -29,6 +28,16 @@
                 <input type="submit" value="Sign Up" class="signup-button">
                 <p>Already User ? <a href="/users/sign-in"><span style="color:#007bff;">Sign in</span></a></p>
             </div>
+            
+            <p>
+                <strong><a href="/users/auth/google">Google Sign In / Up</a> </strong>   
+            </p>    
         </form>
     </div>
 </section>
+
+
+
+<p>
+    <a href="/users/auth/google">Google sign in/up</a>    
+</p>

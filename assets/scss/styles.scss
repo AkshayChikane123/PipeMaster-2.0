@@ -191,7 +191,7 @@
                 padding: 10px;
                 border: 1px solid #a09797;
                 text-align: center;
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
 
             // Ensure input takes the width of its parent td
@@ -202,9 +202,9 @@
                 font-size: 1rem;
                 position: relative; // Ensure td positioning context
 
-                input[type="text"],
+               
                 input[type="number"] {
-                    width: 100%; // Take full width of td
+                    width: 70%; // Take full width of td
                     box-sizing: border-box; // Include padding/border in width
                     padding: 5px;
                     border-radius: 4px;
@@ -302,8 +302,13 @@
             padding: 12px; // Example padding for table cells
             text-align: center; // Center align text in cells
             border: 1px solid #a09797;
+            font-weight: bold;
             // min-width: fit-content;
             // Example bottom border for cells
+        }
+        td{
+            font-weight: bold;
+
         }
 
         tfoot {
@@ -315,6 +320,7 @@
             padding: 12px; // Example padding for footer cells
             text-align: center; // Center align text in footer cells
             border: 1px solid #a09797;
+            font-weight: bold; // Example font weight for footer cells
             // Example top border for footer
         }
     }
